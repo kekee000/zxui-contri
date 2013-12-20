@@ -1,0 +1,27 @@
+@checkbox-prefix: ecl-ui-checkbox;
+
+.@{checkbox-prefix} {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 20px;
+    
+    &-ico {
+        width: 16px;
+        height: 16px;
+        margin: 2px 1px;
+        display: inline-block;
+        vertical-align: bottom;
+        background: url('http://www.baidu.com/cache/biz/ecom/health/img/health_left_0-1.gif') no-repeat 2px -295px;
+    }
+
+    &-text {
+        display: inline-block;
+        line-height: 20px;
+    }
+}
+
+.@{checkbox-prefix}-checked {
+    .@{checkbox-prefix}-ico {
+        background-position: 0px -174px;
+    }
+}

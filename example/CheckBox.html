@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CheckBox</title>
+<link rel="stylesheet/less" href="../src/css/CheckBox.less" />
+<script src="../dep/less-1.5.0.min.js"></script>
+<script src="../dep/esl.js"></script>
+</head>
+<body>
+<div id='content_left'>
+    <label id="checkbox"></label>
+</div>
+<script>
+    require.config({
+        baseUrl: '../',
+        paths : {
+             'zxui': 'http://vs-static.baidu.com/onesite/dep/zxui/0.4.6/asset/ui'
+         }
+    });
+    require([ 'zxui/lib', 'src/CheckBox'], function (lib, CheckBox) {
+        var cb = new CheckBox({
+            main: lib.g('checkbox'),
+            content: '天黑',
+            onChange: function(e) {
+                lib.setStyles(document.body, {
+                    'background': e.checked ? '#CCC' : ''
+                });
+            }
+        }).render();
+    });
+
+    less.refresh();
+</script>
+</div>
+</div>
+ 
+
+</body>
+</html>
